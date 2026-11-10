@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app ");
 });
 
+app.get("/demo", (req, res) => {
+  res.send("Demo of DevOps manually!");
+});
+
 app.get("/version", (req, res) => {
   res.json({
     version: VERSION,
