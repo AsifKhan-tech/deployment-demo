@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3000;
-const VERSION = process.env.APP_VERSION || 1;
+const VERSION = process.env.APP_VERSION || "^1.1";
 
 app.get("/", (req, res) => {
   res.send("Hello from deployment app ");
