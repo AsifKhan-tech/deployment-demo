@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/demo", (req, res) => {
-  res.send("Demo of DevOps manually start!");
+  res.send("Demo of DevOps manually start!\n Now it's time to deploy it.");
 });
 
 app.get("/version", (req, res) => {
