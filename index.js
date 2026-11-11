@@ -14,6 +14,10 @@ app.get("/demo", (req, res) => {
   res.send("Demo of DevOps manually start!\n Now it's time to deploy it.");
 });
 
+app.get("/ssh", (req, res) => {
+  res.send("Connect with the VPS using SSH on port 22");
+});
+
 app.get("/version", (req, res) => {
   res.json({
     version: VERSION,
