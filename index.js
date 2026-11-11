@@ -15,7 +15,9 @@ app.get("/demo", (req, res) => {
 });
 
 app.get("/ssh", (req, res) => {
-  res.send("Connect with the VPS using SSH on port 22");
+  res.send(
+    "Connect with the VPS using SSH on port 22\n Addd new line in this endpoint. ",
+  );
 });
 
 app.get("/version", (req, res) => {
