@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 app.get("/new", (req, res) => {
   res.status(200).json({
-    ok: true,
+    ok: "CI / CD GitHub Actions",
     message: "This is v1 of demo",
   });
 });

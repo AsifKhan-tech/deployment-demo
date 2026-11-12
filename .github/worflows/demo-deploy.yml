@@ -1,0 +1,25 @@
+name: Demo deployment on Excloud
+
+on: # Event
+  push:
+    branches:
+      - main
+
+jobs: # Steps
+  deploy:
+  runs-on: ubuntu-latest #GitHub machine
+
+  steps:
+    - name: Checkout code # Checkout current code (GitHub server needs my code access)
+      uses: actions/checkout@v4 # plugin
+
+    - name: Deploy on Excloud
+      uses: appleboy/ssh-action@v1.0.3 # What's this?
+      with:
+        host: 45.74.156.40 # VPS
+        username: ubuntu # Kis username se SSH karna hai
+        key: ${{secrets.PRIVATE_KEY}}
+        script: cd /home/ubuntu/deployment-demo
+          git pull
+          pnpm i
+          pm2 restart 0
