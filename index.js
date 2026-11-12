@@ -37,4 +37,5 @@ app.listen(PORT, () => {
 
 /**
  * By default there should be a security group availabe when create a machine on Excloud
+ * Configure
  */
