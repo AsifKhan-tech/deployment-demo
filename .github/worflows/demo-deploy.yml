@@ -16,7 +16,8 @@ jobs: # Steps
           username: ubuntu # Kis username se SSH karna hai
           key: ${{secrets.PRIVATE_KEY}}
           script: |
+            export PATH=$PATH:/home/ubuntu/.local/share/pnpm:/home/ubuntu/.nvm/versions/node/$(nvm current)/bin
             cd /home/ubuntu/deployment-demo
-            git pull
-            pnpm i
-            pm2 restart 0
+            git pull origin main
+            /home/ubuntu/.local/share/pnpm/pnpm i
+            npx pm2 restart 0
