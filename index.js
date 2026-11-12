@@ -10,11 +10,8 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app v2.1 ");
 });
 
-app.get("/new", (req, res) => {
-  res.status(200).json({
-    ok: "CI / CD GitHub Actions",
-    message: "This is v1 of demo",
-  });
+app.get("/actions", (req, res) => {
+  res.send("Ready for GitHub Actions");
 });
 
 app.get("/ssh", (req, res) => {
