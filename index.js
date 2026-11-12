@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const VERSION = process.env.APP_VERSION || "^1.1";
 
 app.get("/", (req, res) => {
-  res.send("Hello from deployment app v1 ");
+  res.send("Hello from deployment app v2.1 ");
 });
 
 app.get("/new", (req, res) => {
