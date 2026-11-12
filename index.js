@@ -10,8 +10,11 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app v1 ");
 });
 
-app.get("/test", (req, res) => {
-  res.send("This is my v1 of demo deployment");
+app.get("/new", (req, res) => {
+  res.status(200).json({
+    ok: true,
+    message: "This is v1 of demo",
+  });
 });
 
 app.get("/version", (req, res) => {
