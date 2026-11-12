@@ -17,6 +17,10 @@ app.get("/new", (req, res) => {
   });
 });
 
+app.get("/ssh", (req, res) => {
+  res.send("This is SSH route");
+});
+
 app.get("/version", (req, res) => {
   res.json({
     version: VERSION,
