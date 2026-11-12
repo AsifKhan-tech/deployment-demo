@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app v1 ");
 });
 
+app.get("/test", (req, res) => {
+  res.send("This is my v1 of demo deployment");
+});
+
 app.get("/version", (req, res) => {
   res.json({
     version: VERSION,
@@ -24,7 +28,7 @@ app.get("/health", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on PORT:${PORT}`);
 });
 
 /**
