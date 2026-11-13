@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/actions", (req, res) => {
-  res.send("Ready for GitHub Actions\n Setup for Actions");
+  res.send("Let's see GitHub Actions");
 });
 
 app.get("/ssh", (req, res) => {

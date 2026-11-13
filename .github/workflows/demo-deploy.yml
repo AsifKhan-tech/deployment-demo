@@ -9,7 +9,7 @@ jobs: # Steps
     steps:
       - name: Checkout code # Checkout current code
         uses: actions/checkout@v4 # plugin
-      - name: Deploy on Excloud
+      - name: Deploy on ExCloud
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: 45.74.156.41 # VPS
@@ -18,5 +18,5 @@ jobs: # Steps
           script: |
             cd /home/ubuntu/deployment-demo
             git pull
-            pnpm i
+            pnpm install
             pm2 restart 0
