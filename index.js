@@ -14,6 +14,10 @@ app.get("/actions", (req, res) => {
   res.send("Let's see GitHub Actions. Issue has been fixed by Agent");
 });
 
+app.get("/deploy", (req, res) => {
+  res.send("CI / CD is working fine.");
+});
+
 app.get("/ssh", (req, res) => {
   res.send("This is SSH route");
 });
