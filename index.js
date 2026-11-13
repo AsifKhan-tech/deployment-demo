@@ -15,7 +15,9 @@ app.get("/actions", (req, res) => {
 });
 
 app.get("/deploy", (req, res) => {
-  res.send("CI / CD is working fine.");
+  res.send(
+    "CI / CD is working fine. Fix the Node.js version issue using checkout@v5",
+  );
 });
 
 app.get("/ssh", (req, res) => {

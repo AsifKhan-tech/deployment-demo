@@ -8,7 +8,7 @@ jobs: # Steps
     runs-on: ubuntu-latest #GitHub machine
     steps:
       - name: Checkout code # Checkout current code
-        uses: actions/checkout@v4 # plugin
+        uses: actions/checkout@v5 # plugin uses the Node.js v24
       - name: Deploy on ExCloud
         uses: appleboy/ssh-action@v1.0.3
         with:
