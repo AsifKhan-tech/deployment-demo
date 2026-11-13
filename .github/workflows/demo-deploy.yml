@@ -16,7 +16,10 @@ jobs: # Steps
           username: ubuntu # Kis username se SSH karna hai
           key: ${{secrets.PRIVATE_KEY}}
           script: |
-            cd /home/ubuntu/deployment-demo
-            git pull
-            pnpm install
-            pm2 restart 0
+            bash -ic '
+              set -e
+              cd /home/ubuntu/deployment-demo
+              git pull
+              pnpm install
+              pm2 restart 0
+            '
