@@ -12,7 +12,7 @@ jobs: # Steps
       - name: Deploy on Excloud
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 45.74.156.40 # VPS
+          host: 45.74.156.41 # VPS
           username: ubuntu # Kis username se SSH karna hai
           key: ${{secrets.PRIVATE_KEY}}
           script: |
