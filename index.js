@@ -10,18 +10,17 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app v2.1 ");
 });
 
-app.get("/actions", (req, res) => {
-  res.send("Let's see GitHub Actions. Issue has been fixed by Agent");
-});
-
 app.get("/deploy", (req, res) => {
   res.send(
     "CI / CD is working fine. Fix the Node.js version issue using checkout@v5",
   );
 });
 
-app.get("/ssh", (req, res) => {
-  res.send("This is SSH route");
+app.get("/actions", (req, res) => {
+  res.json({
+    status: "We are in",
+    message: "We have setup GitHub Actions",
+  });
 });
 
 app.get("/version", (req, res) => {
