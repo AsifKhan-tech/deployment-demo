@@ -24,9 +24,7 @@ app.get("/actions", (req, res) => {
 });
 
 app.get("/image", (req, res) => {
-  res.send(
-    "Write CI / CD for build and pus docker image on Docker Hub.\n Fix permissions",
-  );
+  res.send("Fix the Docker.");
 });
 
 app.get("/version", (req, res) => {
