@@ -20,13 +20,15 @@ FROM node:24-alpine
 # Enable corepack to make pnpm available
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
+# It's === mkdir /app & cd /app. Every command after this line will execute inside /app directory.
+# Instead of cluttering the root directory of the OS(Linux)
 WORKDIR /app
 
 # Copy lockfile and manifest first to leverage Docker layer caching
 COPY package.json pnpm-lock.yaml ./
 
 # Install exact dependencies from lockfile
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --prod
 
 # Copy application source code after installing dependencies
 COPY index.js ./
