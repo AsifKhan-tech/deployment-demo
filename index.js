@@ -18,7 +18,7 @@ app.get("/deploy", (req, res) => {
 
 app.get("/actions", (req, res) => {
   res.json({
-    status: "We are in.",
+    status: "We are in. Docker 🐋",
     message: "We have setup GitHub Actions & they are working fine. ",
   });
 });
