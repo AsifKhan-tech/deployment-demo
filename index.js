@@ -23,6 +23,10 @@ app.get("/actions", (req, res) => {
   });
 });
 
+app.get("/image", (req, res) => {
+  res.send("Write CI / CD for build and pus docker image on Docker Hub.");
+});
+
 app.get("/version", (req, res) => {
   res.json({
     version: VERSION,
