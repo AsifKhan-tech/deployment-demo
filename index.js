@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send("Hello from deployment app v2.1 ");
 });
 
+app.get("/about", (req, res) => {
+  res.send("This is the demo of DevOps.");
+});
+
 app.get("/deploy", (req, res) => {
   res.send(
     "CI / CD is working fine. Fix the Node.js version issue using checkout@v5",
