@@ -39,11 +39,14 @@ jobs:
           script: |
             set -e
 
-            for container_id in $(sudo docker ps -aq --filter "publish=3000"); do
+            sudo docker rm -f demo-app || true
+
+            for container_id in $(sudo docker ps -aq --filter "publish=80"); do
               sudo docker rm -f "$container_id"
             done
 
             sudo docker pull asifdotcom/demo:tagname
+
             sudo docker run -d \
               --name demo-app \
               --restart unless-stopped \
