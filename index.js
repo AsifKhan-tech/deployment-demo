@@ -49,7 +49,10 @@ app.get("/network", (req, res) => {
 });
 
 app.get("/compose", (req, res) => {
-  res.send("orchastrate the containers");
+  res.status(201).json({
+    success: true,
+    message: "orchastrate the containers",
+  });
 });
 
 app.listen(PORT, () => {
