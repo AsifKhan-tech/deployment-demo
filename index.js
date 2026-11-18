@@ -66,6 +66,13 @@ app.get("/dev", (req, res) => {
   res.send("dev");
 });
 
+app.get("/copyright", (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Page not found",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT:${PORT}`);
 });
