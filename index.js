@@ -62,6 +62,10 @@ app.get("/contact", (req, res) => {
   });
 });
 
+app.get("/dev", (req, res) => {
+  res.send("dev");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT:${PORT}`);
 });
