@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.send("This is the demo of DevOps.\n Fix the error");
+  res.send("This is the demo of DevOps.");
 });
 
 app.get("/deploy", (req, res) => {
