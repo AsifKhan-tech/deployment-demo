@@ -48,6 +48,10 @@ app.get("/network", (req, res) => {
   res.send("Bind containers under a network.");
 });
 
+app.get("/compose", (req, res) => {
+  res.send("orchastrate the containers");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT:${PORT}`);
 });
