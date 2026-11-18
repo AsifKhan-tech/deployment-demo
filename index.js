@@ -55,6 +55,13 @@ app.get("/compose", (req, res) => {
   });
 });
 
+app.get("/contact", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Thanks for contact",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT:${PORT}`);
 });
