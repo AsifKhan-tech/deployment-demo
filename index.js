@@ -44,6 +44,10 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.get("/network", (req, res) => {
+  res.send("Bind containers under a network.");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT:${PORT}`);
 });
