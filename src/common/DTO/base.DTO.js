@@ -4,17 +4,17 @@ class BaseDTO {
   static schema = Joi.object({});
 
   static validatePayload(payload) {
-    const { error, value } = this.schema.validate(payload, {
+    const { errors, value } = this.schema.validate(payload, {
       abortEarly: false,
       stripUnknown: true,
     });
 
-    if (error) {
-      const errors = error.details.map((detail) => detail.message);
+    if (errors) {
+      const errors = errors.details.map((detail) => detail.message);
       return { errors, value: null };
     }
 
-    return { value, error: null };
+    return { value, errors: null };
   }
 }
 
