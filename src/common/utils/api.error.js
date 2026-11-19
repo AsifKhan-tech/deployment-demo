@@ -28,4 +28,12 @@ class APIError extends Error {
   static conflict(message = "Conflict - User already exists") {
     return new APIError(409, message);
   }
+
+  static internal(
+    message = "Failed to send verification email. Please try again",
+  ) {
+    return new APIError(412, message);
+  }
 }
+
+export default APIError;
