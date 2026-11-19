@@ -8,7 +8,7 @@ class APIResponse {
   }
 
   static created(res, message, data = null) {
-    return res.json({
+    return res.status(201).json({
       sucess: true,
       message: message,
       data: data,
