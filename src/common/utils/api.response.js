@@ -19,3 +19,5 @@ class APIResponse {
     return res.status(204).send();
   }
 }
+
+export default APIResponse;
