@@ -6,4 +6,12 @@ class APIResponse {
       data: data,
     });
   }
+
+  static created(res, message, data = null) {
+    return res.json({
+      sucess: true,
+      message: message,
+      data: data,
+    });
+  }
 }
