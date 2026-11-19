@@ -1,17 +1,14 @@
 import mongoose from "mongoose";
 
-export const connectDB = async (
-  mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI,
-) => {
-  if (!mongoUri) {
-    throw new Error(
-      "Database connection URI is not configured. Set MONGO_URI or MONGODB_URI.",
-    );
+export const connectDB = async () => {
+  const URI = process.env.MONGODB_URI.trim();
+  if (!URI) {
+    throw new Error("Database connection URI is not configured.");
   }
 
   try {
-    await mongoose.connect(mongoUri);
-    console.log("MongoDB connected");
+    const connect = await mongoose.connect(URI);
+    console.log("MongoDB connected", connect.connection.host);
     return mongoose.connection;
   } catch (error) {
     console.error("MongoDB connection failed:", error.message);
