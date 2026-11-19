@@ -17,7 +17,11 @@ class APIError extends Error {
     return new APIError(401, message, code);
   }
 
+  static forbidden(message = "forbidden") {
+    return new APIError(403, message);
+  }
+
   static conflict(message = "Conflict - User already exists") {
-    return APIError(409, message);
+    return new APIError(409, message);
   }
 }
