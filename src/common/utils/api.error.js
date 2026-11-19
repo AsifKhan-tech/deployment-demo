@@ -16,4 +16,8 @@ class APIError extends Error {
   static unauthorized(message = "Unauthorized", code = "UNAUTHORIZED") {
     return new APIError(401, message, code);
   }
+
+  static conflict(message = "Conflict - User already exists") {
+    return APIError(409, message);
+  }
 }
