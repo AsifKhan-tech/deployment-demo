@@ -8,5 +8,14 @@ class BaseDTO {
       abortEarly: false,
       stripUnknown: true,
     });
+
+    if (error) {
+      const errors = error.details.map((detail) => detail.message);
+      return { errors, value: null };
+    }
+
+    return { value, error: null };
   }
 }
+
+export default BaseDTO;
