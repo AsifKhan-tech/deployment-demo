@@ -21,6 +21,10 @@ class APIError extends Error {
     return new APIError(403, message);
   }
 
+  static notFound(message = "account found") {
+    return new APIError(404, message);
+  }
+
   static conflict(message = "Conflict - User already exists") {
     return new APIError(409, message);
   }
